@@ -1,6 +1,8 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  text-transform: none;
 }
 
 body {
@@ -37,8 +39,8 @@ body {
 
 .login-form__header {
   display: block;
-  font-size: 48px;
-  color: $gray-light;
+  @include proxima_nova_light(48px, $gray-light);
+  text-transform: none;
 }
 
 .login-form__logo {
@@ -46,5 +48,6 @@ body {
 }
 
 .login_form__create-account {
+
   color: $gray-light;
 }

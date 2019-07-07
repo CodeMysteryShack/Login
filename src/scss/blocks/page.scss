@@ -8,26 +8,16 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  // height: 100vh;
-  max-height: $min-margin + $form-width + $min-margin;
+  height: 100vh;
+  min-height: $min-margin + $form-width + $min-margin;
   min-width: $min-margin + $form-width + $min-margin;
   background: url(../img/bg.png) no-repeat center center fixed;
   background-size: cover;
 }
 
-.page {
-  font-family: $font-family;
-
-  &__inner {}
-
-  &__content {}
-
-  &__footer-wrapper {}
-}
-
 .login-form {
   display: flex;
-  align-self: center;
+  flex-direction: column;
   box-sizing: border-box;
   min-width: $form-width;
   min-height: $form-height;
@@ -40,17 +30,21 @@ body {
 .login-form__head {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
 }
 
 .login-form__header {
   display: block;
-  color:$gray-light;
+  font-size: 48px;
+  color: $gray-light;
 }
 
 .login-form__logo {
   display: block;
 }
 
-
+.login_form__create-account {
+  color: $gray-light;
+}

@@ -1,0 +1,55 @@
+doctype html
+html(class='page  no-js', lang='ru')
+
+  head
+    title Главная
+    meta(charset='utf-8', name='description', content='')
+
+    block meta
+      title Главная
+      meta(name='description', content='')
+
+    block head
+      link(rel='stylesheet', href='css/style.css')
+      script.
+        document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+
+  body
+    noscript У вас отключен JavaScript. Это пугает.
+    .login-form
+      .login-form__head
+        .login-form__header Sign In
+        .login-form__logo
+          img(src='img/Logo.png', alt='')
+
+    //- .page__inner
+    //-   .page__content
+
+    //-     block header
+    //-       p Шапка
+
+    //-     block content
+    //-       p Cодержимое
+
+    //-   .page__footer-wrapper
+    //-     block footer
+    //-       p Подвал
+
+    block page-bottom
+      script(src='js/vendors.min.js')
+      script(src='js/script.min.js')
+
+//- block append head
+//-   link(rel='stylesheet', href='css/some.css')
+
+//- block header
+//-   p Лого
+
+//- block content
+//-   h1 Заголовок
+
+//- block footer
+//-   p footer
+
+//- block append page-bottom
+//-   script(src='js/some.js')

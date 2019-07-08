@@ -3,6 +3,7 @@ $warning-color:       #fdc05d;
 
 $gray-light:          rgb(150, 150, 150);
 $gray-dark:           rgb(12, 13, 17);
+$gray-input:          rgb(24, 25, 30);
 $yellow:              rgb(210, 157, 65);
 
 $text-color:          $gray-dark;
@@ -31,8 +32,25 @@ $screen-lg:           1200px;
     font-style: normal;
   }
 
+@font-face {
+    font-family: 'proxima_nova_semibold';
+    src: url('../fonts/proximanova-semibold-webfont.woff2') format('woff2'),
+         url('../fonts/proximanova-semibold-webfont.woff') format('woff'),
+         url('../fonts/proximanova-semibold-webfont.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+
 @mixin proxima_nova_light($mx-font-size, $mx-font-color) {
   font-family: 'proxima_nova_light';
+  font-weight: 300;
+  font-style: normal;
+  font-size: $mx-font-size;
+  color: $mx-font-color;
+}
+
+@mixin proxima_nova_semibold($mx-font-size, $mx-font-color) {
+  font-family: 'proxima_nova_semibold';
   font-weight: 300;
   font-style: normal;
   font-size: $mx-font-size;

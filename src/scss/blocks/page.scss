@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-transform: none;
+  z-index: 0;
 }
 
 body {
@@ -23,8 +23,6 @@ body {
   box-sizing: border-box;
   min-width: $form-width;
   min-height: $form-height;
-  // width: $form-width;
-  // height: $form-height;
   padding: 60px 30px 65px 30px;
   background-color: $gray-dark;
 }
@@ -35,12 +33,12 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  margin-bottom: 65px;
 }
 
 .login-form__header {
   display: block;
   @include proxima_nova_light(48px, $gray-light);
-  text-transform: none;
 }
 
 .login-form__logo {
@@ -48,6 +46,64 @@ body {
 }
 
 .login_form__create-account {
+  @include proxima_nova_light(18px, $gray-light);
 
-  color: $gray-light;
+  & a {
+    display: inline-block;
+    margin-left: 30px;
+    color: $yellow;
+    text-decoration: none;
+  }
+}
+
+.login-form__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form__input {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 81px;
+  margin-bottom: 28px;
+  padding-left: 22px;
+  padding-right: 24px;
+  background-color: $gray-input;
+  background-repeat: no-repeat;
+  background-position: right 24px center;
+  border: none;
+  box-shadow: inset 0px 1px 0 rgba(255,255, 255, .04);
+  border-left: 2px solid rgba(255, 255, 255, 0);
+  outline: 0;
+  outline-offset: 0;
+  @include proxima_nova_semibold(24px, $gray-light);
+
+  &:focus {
+    border-left: 2px solid $yellow;
+  }
+}
+
+.login-form__input--arian {
+  background-image: url('../img/glyphicons_003_user.png');
+}
+.login-form__input--password {
+  background-image: url('../img/glyphicons_248_asterisk.png');
+}
+
+.login-form__input--submit {
+  padding: 0;
+  border: none;
+  background-color: $yellow;
+  background-image: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: rgb(108, 65, 27);
+  box-shadow: inset 0px 1px 0 rgba(255,255, 255, .38);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+
+  &:hover {
+    padding-top: 3px;
+    opacity: 0.95;
+  }
 }

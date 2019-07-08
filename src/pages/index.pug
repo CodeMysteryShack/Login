@@ -21,9 +21,10 @@ html(class='page  no-js', lang='ru')
         .login-form__header Sign In
         .login-form__logo
           img(src='img/Logo.png', alt='')
-
-      form
-
+      form.login-form__form(id="signin_form", method="post")
+        input.login-form__input.login-form__input--arian(type="text", placeholder="Arian")
+        input.login-form__input.login-form__input--password(type="text", placeholder="Password")
+        input.login-form__input.login-form__input--submit(type="submit", value="Sign In")
       .login_form__create-account Forgot password?
         a(href="#") Create an account
     //- .page__inner
